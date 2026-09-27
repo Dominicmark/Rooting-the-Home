@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-earth-950: #0E0C0A;
+  --color-earth-900: #161310;
+  --color-earth-850: #1D1915;
+  --color-earth-800: #25201A;
+  --color-earth-700: #383027;
+  --color-earth-600: #54493C;
+  --color-earth-500: #7A6C5B;
+  --color-earth-400: #A89885;
+  --color-earth-300: #CBBFB0;
+  --color-earth-200: #E4DCD0;
+  --color-earth-100: #F3ECE2;
+  --color-earth-50: #FAF6F0;
+
+  --color-terracotta-500: #B85028;
+  --color-terracotta-600: #9E3F1C;
+  --color-terracotta-400: #CF653A;
+  --color-terracotta-300: #E28863;
+  --color-terracotta-100: #F7DDD2;
+
+  --color-ochre-500: #C98B32;
+  --color-ochre-400: #DD9E42;
+  --color-ochre-200: #F4D9A8;
+
+  --color-sage-900: #18221B;
+  --color-sage-800: #222F26;
+  --color-sage-700: #314436;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    background-color: var(--color-earth-950);
+    color: var(--color-earth-50);
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: var(--font-serif);
+    font-feature-settings: "cv01", "cv02", "ss01";
+  }
+}
+
+/* Custom editorial styles */
+.editorial-lead {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Subtle image reveal effect */
+.archival-shadow {
+  box-shadow: 0 20px 45px -15px rgba(14, 12, 10, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.cream-card-shadow {
+  box-shadow: 0 12px 30px -10px rgba(56, 48, 39, 0.08), 0 0 0 1px rgba(56, 48, 39, 0.06);
+}
+
+/* Hide scrollbar for clean horizontal story panels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Continuous smooth scrolling marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+

@@ -1,0 +1,7 @@
+{
+  "name": "Rooting the Home",
+  "description": "A virtual four-week guided experience exploring identity, family history, belonging, rootedness and cultural connection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
