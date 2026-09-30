@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { X, CheckCircle, ArrowRight, ShieldCheck, Sparkles, ExternalLink, Calendar, Clock } from 'lucide-react';
 import { PROGRAM_CONFIG } from '../config/programContent';
+import { Countdown } from './Countdown';
 
 interface EnrollmentModalProps {
   isOpen: boolean;
@@ -77,13 +78,11 @@ export function EnrollmentModal({ isOpen, onClose, initialTier = 'early' }: Enro
                   </span>
                 </div>
               </div>
-              <div className="text-right hidden sm:block">
+              <div className="text-right flex flex-col items-end">
                 <span className="text-[10px] font-mono uppercase tracking-wider text-[#A89885] block">
-                  Time
+                  Kickoff Countdown
                 </span>
-                <span className="text-xs font-mono text-[#E4DCD0]">
-                  4:30 PM CAT
-                </span>
+                <Countdown variant="compact" />
               </div>
             </div>
 

@@ -51,7 +51,7 @@ export function MemoryGallery() {
               <img
                 src={portraits[0].url}
                 alt={portraits[0].alt}
-                className="w-full h-full object-cover object-center filter saturate-[0.9] group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover object-[center_25%] filter saturate-[0.9] group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0E0C0A]/90 via-[#0E0C0A]/20 to-transparent" />

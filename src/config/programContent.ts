@@ -25,6 +25,7 @@ export const PROGRAM_CONFIG = {
   format: 'Virtual (Zoom & Guided Archive Portal)',
   duration: 'Four weeks',
   kickoffDate: '10 October 2026',
+  kickoffTargetDate: '2026-10-10T16:30:00+02:00',
   kickoffTimeRwanda: '4:30 PM – 6:30 PM Rwanda Time (CAT / UTC+2)',
   cohortTag: 'Founding Cohort / Pilot',
   heroTagline: 'A four-week journey into identity, family, belonging and the stories that shaped us.',

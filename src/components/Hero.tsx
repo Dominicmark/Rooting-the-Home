@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Volume2, VolumeX, ArrowDown, ArrowUpRight, Calendar, Clock, Sparkles } from 'lucide-react';
 import { PROGRAM_CONFIG } from '../config/programContent';
+import { Countdown } from './Countdown';
 
 interface HeroProps {
   videoUrl: string;
@@ -115,12 +116,22 @@ export function Hero({
           A four-week guided virtual journey exploring identity, family memory, belonging, and cultural connection.
         </motion.p>
 
+        {/* Live Kickoff Countdown */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-6 sm:mt-8"
+        >
+          <Countdown variant="hero" />
+        </motion.div>
+
         {/* Primary Action Button */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.55 }}
-          className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-4"
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center gap-4"
         >
           <a
             href={PROGRAM_CONFIG.registrationUrl}

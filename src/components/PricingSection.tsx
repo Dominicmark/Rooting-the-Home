@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Check, Clock, Calendar, Globe, ArrowRight, Sparkles } from 'lucide-react';
 import { PROGRAM_CONFIG } from '../config/programContent';
+import { Countdown } from './Countdown';
 
 interface PricingSectionProps {
   onSelectTier: (tier: 'early' | 'standard' | 'supported') => void;
@@ -99,6 +100,11 @@ export function PricingSection({ onSelectTier }: PricingSectionProps) {
                 <span className="text-sm font-mono text-[#FAF6F0] font-semibold">{TIMEZONES[selectedTz].time}</span>
               </div>
             </div>
+          </div>
+
+          {/* Integrated Live Countdown Strip */}
+          <div className="relative z-10 mt-8 pt-8 border-t border-[#383027]/70">
+            <Countdown variant="strip" onOpenEnrollment={() => onSelectTier('early')} />
           </div>
         </motion.div>
 

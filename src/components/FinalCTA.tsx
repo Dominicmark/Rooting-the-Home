@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { MediaAsset } from '../config/mediaConfig';
 import { PROGRAM_CONFIG } from '../config/programContent';
+import { Countdown } from './Countdown';
 
 interface FinalCTAProps {
   finalImage: MediaAsset;
@@ -78,13 +79,24 @@ export function FinalCTA({ finalImage, onOpenEnrollment }: FinalCTAProps) {
           <span>Live forward.</span>
         </motion.div>
 
+        {/* Live Kickoff Countdown */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.35 }}
+          className="mt-8"
+        >
+          <Countdown variant="hero" />
+        </motion.div>
+
         {/* Primary CTA */}
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-30px' }}
           transition={{ duration: 0.85, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
             href={PROGRAM_CONFIG.registrationUrl}

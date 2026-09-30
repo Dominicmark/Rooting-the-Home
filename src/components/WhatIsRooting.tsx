@@ -38,22 +38,23 @@ export function WhatIsRooting({ image }: WhatIsRootingProps) {
             </div>
 
             {/* Editorial photography with subtle frame */}
-            <div className="mt-10 relative group overflow-hidden rounded-xl bg-[#1D1915] border border-[#383027]/70">
-              <motion.img
-                initial={{ scale: 1.08 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 1.4, ease: 'easeOut' }}
-                viewport={{ once: true }}
-                src={image.url}
-                alt={image.alt}
-                className="w-full h-80 sm:h-96 object-cover object-center filter saturate-[0.88] brightness-[0.92] group-hover:scale-105 transition-transform duration-700"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0E0C0A]/80 via-transparent to-transparent" />
+            <div className="mt-8">
+              <div className="relative group overflow-hidden rounded-xl bg-[#1D1915] border border-[#383027]/70 shadow-2xl">
+                <motion.img
+                  initial={{ scale: 1.02 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 1.2, ease: 'easeOut' }}
+                  viewport={{ once: true }}
+                  src={image.url}
+                  alt={image.alt}
+                  className="w-full h-[360px] sm:h-[420px] object-cover object-bottom filter saturate-[0.92] brightness-[0.96] group-hover:scale-[1.02] transition-transform duration-700"
+                  loading="lazy"
+                />
+              </div>
               {image.caption && (
-                <div className="absolute bottom-4 left-4 right-4 text-xs font-sans text-[#E4DCD0] tracking-wide font-light">
+                <p className="mt-2.5 text-xs font-sans text-[#A89885] tracking-wide font-light italic">
                   {image.caption}
-                </div>
+                </p>
               )}
             </div>
           </motion.div>

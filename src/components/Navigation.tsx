@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight, Calendar } from 'lucide-react';
 import { PROGRAM_CONFIG } from '../config/programContent';
+import { Countdown } from './Countdown';
 
 interface NavigationProps {
   onOpenEnrollment: (tier?: 'early' | 'standard' | 'supported') => void;
@@ -28,15 +29,19 @@ export function Navigation({ onOpenEnrollment }: NavigationProps) {
 
   return (
     <>
-      {/* 1. Subtle High-Notice Announcement Ribbon for Webinar Date */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-[#161310] border-b border-[#383027] text-center py-1.5 px-4 text-xs font-mono tracking-wider flex items-center justify-center gap-2 text-[#E4DCD0]">
-        <Calendar className="w-3.5 h-3.5 text-[#E28863]" />
-        <span>
-          Live Cohort Kickoff: <strong className="text-[#FAF6F0] font-semibold">{PROGRAM_CONFIG.kickoffDate}</strong> (Virtual on Zoom)
-        </span>
+      {/* 1. Subtle High-Notice Announcement Ribbon for Webinar Date & Countdown */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-[#161310] border-b border-[#383027] text-center py-1.5 px-4 text-xs font-mono tracking-wider flex items-center justify-center gap-2 sm:gap-3 text-[#E4DCD0]">
+        <div className="flex items-center gap-1.5">
+          <Calendar className="w-3.5 h-3.5 text-[#E28863]" />
+          <span>
+            Live Kickoff: <strong className="text-[#FAF6F0] font-semibold">{PROGRAM_CONFIG.kickoffDate}</strong>
+          </span>
+        </div>
+        <span className="text-[#7A6C5B] hidden sm:inline">·</span>
+        <Countdown variant="compact" className="hidden xs:inline-flex" />
         <button
           onClick={() => onOpenEnrollment('early')}
-          className="ml-2 underline text-[#E28863] hover:text-[#FAF6F0] transition-colors cursor-pointer hidden sm:inline"
+          className="ml-1 sm:ml-2 underline text-[#E28863] hover:text-[#FAF6F0] transition-colors cursor-pointer hidden sm:inline"
         >
           Reserve Spot &rarr;
         </button>

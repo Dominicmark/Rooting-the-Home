@@ -27,8 +27,8 @@ export const MEDIA_CONFIG = {
 
   // Section 3: What is Rooting the Home
   familyImage1: {
-    url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Contemplative, evocative portrait exploring personal identity',
+    url: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790753809/WhatsApp_Image_2026-09-28_at_10.38.59_AM_n813qw.jpg',
+    alt: 'Know Your Roots, Know Your Truth — An invitation into curiosity, not prescription',
     caption: 'Gathering the fragments of where we come from',
   },
 
@@ -38,33 +38,33 @@ export const MEDIA_CONFIG = {
       id: 'name',
       label: 'A NAME',
       subtitle: 'Carried across generations',
-      url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80',
-      alt: 'Portrait of dignity, family presence and reflection',
+      url: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790754480/Child_standing_confidently_dark___20260930084740_ermwnh.jpg',
+      alt: 'Child standing confidently — Carried across generations',
       aspectRatio: 'aspect-[3/4]',
     },
     {
       id: 'place',
       label: 'A PLACE',
       subtitle: 'The landscape where the journey began',
-      url: 'https://images.unsplash.com/photo-1516026656418-4051bf5f55bd?auto=format&fit=crop&w=1000&q=80',
-      alt: 'Warm earthy landscape bathed in golden hour light',
+      url: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790755385/Journey_begins_in_landscape_20260930090159_swzk5i.jpg',
+      alt: 'The landscape where the journey began',
       aspectRatio: 'aspect-[4/3]',
     },
     {
       id: 'person',
       label: 'A PERSON',
       subtitle: 'The one who held the stories first',
-      url: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1000&q=80',
-      alt: 'Warm, thoughtful family elder portrait',
+      url: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790754672/Kwame_in_Ghanaian_royal_attire_202607131839_wmgdlj.jpg',
+      alt: 'Kwame in Ghanaian royal attire — The one who held the stories first',
       aspectRatio: 'aspect-[3/4]',
     },
     {
       id: 'memory',
       label: 'A MEMORY',
       subtitle: 'Preserved in quiet moments',
-      url: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80',
-      alt: 'Shared laughter and intergenerational warmth',
-      aspectRatio: 'aspect-[1/1]',
+      url: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790756215/Person_sitting_in_modern_home_20260930091628_okoboh.jpg',
+      alt: 'Person sitting in modern home — Preserved in quiet moments',
+      aspectRatio: 'aspect-[16/9]',
     },
     {
       id: 'story',
@@ -86,15 +86,15 @@ export const MEDIA_CONFIG = {
 
   // Section 8: The Rooted Action
   rootedActionImage: {
-    url: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Hands coming together in mutual care and reconnection',
+    url: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790756703/Family_ancestral_gallery_in_arch__20260930092315_vpkwl6.jpg',
+    alt: 'Family ancestral gallery — Rootedness as a living, daily practice',
     caption: 'Rootedness as a living, daily practice',
   },
 
   // Section 9: The Roots Showcase
   showcaseImage: {
-    url: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Intimate community gathering sharing stories around a table',
+    url: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790757322/People_placing_objects_on_table_20260930093426_x2ax49.jpg',
+    alt: 'People placing meaningful objects on the community table',
     caption: 'The virtual community table where our discoveries meet',
   },
 
