@@ -14,6 +14,7 @@ import { WhatYouWillDo } from './components/WhatYouWillDo';
 import { RootsQuest } from './components/RootsQuest';
 import { RootedAction } from './components/RootedAction';
 import { Showcase } from './components/Showcase';
+import { SpeakersSection } from './components/SpeakersSection';
 import { WhoIsThisFor } from './components/WhoIsThisFor';
 import { PricingSection } from './components/PricingSection';
 import { FinalCTA } from './components/FinalCTA';
@@ -99,7 +100,10 @@ export default function App() {
         {/* 10. Section 9 — The Roots Showcase (What we found · Community table) */}
         <Showcase showcaseImage={MEDIA_CONFIG.showcaseImage} />
 
-        {/* 11. Section 10 — Who is this for? (For people who have questions about home) */}
+        {/* 11. Section 10 — Guiding Voices & Webinar Speakers */}
+        <SpeakersSection onOpenEnrollment={() => handleOpenEnrollment('early')} />
+
+        {/* 12. Section 11 — Who is this for? (For people who have questions about home) */}
         <WhoIsThisFor />
 
         {/* 12. Section 11 — Founding Cohort (Editorial pricing & local timezone selector) */}

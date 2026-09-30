@@ -36,7 +36,7 @@ export function PricingSection({ onSelectTier }: PricingSectionProps) {
           className="text-center max-w-2xl mx-auto mb-14"
         >
           <span className="text-[11px] uppercase tracking-[0.3em] text-[#C98B32] font-mono block mb-3">
-            Section 11 — Participation
+            Section 12 — Participation
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#FAF6F0] font-normal tracking-tight">
             JOIN THE FOUNDING COHORT.

@@ -178,3 +178,96 @@ export const WHO_IS_THIS_FOR = [
     text: 'Recognizing that knowing where you come from clarifies where you are going.',
   },
 ];
+
+export interface WebinarSpeaker {
+  id: string;
+  name: string;
+  role: string;
+  organization: string;
+  location?: string;
+  focusArea: string;
+  topics: string[];
+  shortBio: string;
+  fullBio: string;
+  quote?: string;
+  credentials?: string[];
+  imageUrl: string;
+  rawImageUrl: string;
+}
+
+export const WEBINAR_SPEAKERS: WebinarSpeaker[] = [
+  {
+    id: 'steffi-nineza',
+    name: 'Steffi B. Nineza',
+    role: 'Head of Gender & Inclusion',
+    organization: 'Mastercard Foundation Rwanda',
+    location: 'Kigali, Rwanda',
+    focusArea: 'Inclusive Systems & Community Anchoring',
+    topics: ['Inclusion & Safeguarding', 'Youth Leadership', 'Systems Change'],
+    shortBio:
+      'Head of Gender & Inclusion at Mastercard Foundation Rwanda Country Programs, championing refugee inclusion, youth mentorship, and dignified livelihoods across Africa and Canada.',
+    fullBio:
+      "Steffi B. Nineza is the Head of Gender & Inclusion at the Mastercard Foundation Rwanda Country Programs, where she leads efforts to advance gender, disability, refugee inclusion, and safeguarding across the Foundation's investments and strategic initiatives. With experience spanning finance, strategy, operations, and social impact, she has held leadership roles at the Mastercard Foundation, Absa Group, Deloitte, and other organizations in Africa and Canada. Steffi is a passionate advocate for inclusive development and systems change, with a particular focus on expanding opportunities for young women and other underserved groups to access dignified and fulfilling work. She has designed and led initiatives supporting youth leadership, mentorship, and refugee inclusion, and has served as a trainer, mentor, speaker, and board member. Steffi holds an MBA from the University of Pretoria and is a Chartered Professional Accountant (CPA, CA).",
+    quote:
+      'Advancing systems where young people and underserved communities find deep dignity, belonging, and enduring opportunity.',
+    credentials: [
+      'MBA, University of Pretoria',
+      'Chartered Professional Accountant (CPA, CA)',
+      'Former Leadership at Deloitte & Absa Group',
+    ],
+    // Optimized with Cloudinary facial focus, auto compression & responsive dimensions
+    imageUrl:
+      'https://res.cloudinary.com/dbbw8jsjc/image/upload/c_fill,g_face,w_600,h_750,q_auto,f_auto/v1790776829/WhatsApp_Image_2026-09-30_at_12.35.35_PM_cxemas.jpg',
+    rawImageUrl:
+      'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790776829/WhatsApp_Image_2026-09-30_at_12.35.35_PM_cxemas.jpg',
+  },
+  {
+    id: 'felix',
+    name: 'Felix',
+    role: 'Historian & Identity Researcher',
+    organization: 'Zürich, Switzerland',
+    location: 'London · Zürich · Nigeria',
+    focusArea: 'Diaspora Histories & Evolving Lineage',
+    topics: ['Diaspora Identity', 'Igbo Heritage', 'European & African Memory'],
+    shortBio:
+      'Zürich-based historian with German and Nigerian roots, born in London and lived across five countries. Utrecht University BA in History, researching how identity evolves across generational and geographic crossings.',
+    fullBio:
+      'Felix is a Zürich-based historian with German and Nigerian roots, born in London. Having lived in five countries, he has always seen identity as an evolving concept. Native in English and German, his Igbo identity is the one that has struggled to break through. He completed his International Baccalaureate at Schule Schloss Salem and holds a BA in History from Utrecht University, where his thesis examined how the Swiss press understood neutrality and national identity in 1940.',
+    quote:
+      'Identity is an evolving concept—bridging what we carry natively with the ancestral lineage waiting to break through.',
+    credentials: [
+      'BA in History, Utrecht University',
+      'Schule Schloss Salem International Baccalaureate',
+      'Trilingual in English, German & Igbo',
+    ],
+    imageUrl:
+      'https://res.cloudinary.com/dbbw8jsjc/image/upload/c_fill,g_face,w_600,h_750,q_auto,f_auto/v1790776829/WhatsApp_Image_2026-09-30_at_12.38.33_PM_mhfj7g.jpg',
+    rawImageUrl:
+      'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790776829/WhatsApp_Image_2026-09-30_at_12.38.33_PM_mhfj7g.jpg',
+  },
+  {
+    id: 'amonica-hubbard',
+    name: "A'Monica Hubbard",
+    role: 'Entrepreneur & Founder',
+    organization: 'Kugaruka Iwacu, Ltd',
+    location: 'Rwanda',
+    focusArea: 'Homecoming, Belonging & Rwandan Hospitality',
+    topics: ['Ancestral Return', 'Homecoming', 'Cultural Hospitality'],
+    shortBio:
+      'Entrepreneur who embarked on an intentional return journey to ancestral soil, founding Kugaruka Iwacu to cultivate spaces of sanctuary, craftsmanship, and peace in Rwanda.',
+    fullBio:
+      'Earlier this year, A’Monica began an intentional journey back to the continent—a return to her ancestral roots. Kugaruka Iwacu, Ltd reflects both her own homecoming and her hope that every guest feels a sense of belonging. We are committed to offering a seamless stay rooted in Rwandan hospitality, craftsmanship, and peaceful living.',
+    quote:
+      'A return to ancestral roots—offering every traveler and seeker a true home rooted in hospitality and peaceful living.',
+    credentials: [
+      'Founder, Kugaruka Iwacu, Ltd',
+      'Curator of Rooted Hospitality & Craftsmanship',
+      'Diaspora Return Practitioner',
+    ],
+    imageUrl:
+      'https://res.cloudinary.com/dbbw8jsjc/image/upload/c_fill,g_face,w_600,h_750,q_auto,f_auto/v1790777613/WhatsApp_Image_2026-09-30_at_3.12.42_PM_v3uul8.jpg',
+    rawImageUrl:
+      'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790777613/WhatsApp_Image_2026-09-30_at_3.12.42_PM_v3uul8.jpg',
+  },
+];
+

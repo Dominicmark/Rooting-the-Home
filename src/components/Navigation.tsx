@@ -22,6 +22,7 @@ export function Navigation({ onOpenEnrollment }: NavigationProps) {
   const navLinks = [
     { name: 'Highlights', href: '#highlights' },
     { name: 'The Journey', href: '#journey' },
+    { name: 'Speakers', href: '#speakers' },
     { name: 'Experience', href: '#experience' },
     { name: 'Showcase', href: '#showcase' },
     { name: 'Cohort', href: '#pricing' },

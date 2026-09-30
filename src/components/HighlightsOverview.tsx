@@ -36,13 +36,13 @@ export function HighlightsOverview({ onSelectSection }: HighlightsOverviewProps)
       accent: '#B85028',
     },
     {
-      id: 'who-is-this-for',
+      id: 'speakers',
       num: '04',
-      tag: 'Community',
-      title: 'Who Belongs Here',
-      desc: 'Diaspora seekers, memory keepers, creatives, and anyone feeling the call to document home.',
+      tag: 'Guiding Voices',
+      title: 'Webinar & Guest Speakers',
+      desc: 'Steffi B. Nineza (Mastercard Fdn), Felix (Historian & Researcher), and A’Monica Hubbard (Kugaruka Iwacu).',
       icon: Users,
-      accent: '#E4DCD0',
+      accent: '#E28863',
     },
     {
       id: 'showcase',

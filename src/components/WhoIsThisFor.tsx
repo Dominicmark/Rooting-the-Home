@@ -18,7 +18,7 @@ export function WhoIsThisFor() {
           className="max-w-3xl mb-16"
         >
           <span className="text-[11px] uppercase tracking-[0.3em] text-[#B85028] font-mono block mb-3 font-medium">
-            Section 10 — The Audience
+            Section 11 — The Community
           </span>
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#1A1612] font-normal tracking-tight">
             FOR PEOPLE WHO HAVE
