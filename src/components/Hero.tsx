@@ -79,8 +79,8 @@ export function Hero({
             Live Kickoff: {PROGRAM_CONFIG.kickoffDate}
           </span>
           <span className="hidden sm:inline w-1 h-1 rounded-full bg-[#B85028]" />
-          <span className="hidden sm:inline font-mono text-xs text-[#E4DCD0] tracking-wider">
-            4:30 PM CAT (Virtual)
+          <span className="hidden sm:inline font-mono text-xs text-[#E8C29D] font-medium tracking-wider">
+            Free Cohort · Workbook Required
           </span>
         </motion.div>
 
@@ -126,22 +126,30 @@ export function Hero({
           <Countdown variant="hero" />
         </motion.div>
 
-        {/* Primary Action Button */}
+        {/* Primary Action Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center gap-4"
+          className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center gap-3.5"
         >
+          <a
+            href="#workbook"
+            id="hero-minimal-workbook-cta"
+            className="px-8 py-4 rounded-full bg-[#B85028] hover:bg-[#CF653A] text-[#FAF6F0] text-xs font-mono uppercase tracking-[0.2em] transition-all duration-300 shadow-2xl hover:shadow-[#B85028]/40 hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer no-underline"
+          >
+            <span>See Required Workbook</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
+
           <a
             href={PROGRAM_CONFIG.registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
             id="hero-minimal-join-cta"
-            className="px-8 py-4 rounded-full bg-[#B85028] hover:bg-[#CF653A] text-[#FAF6F0] text-xs font-mono uppercase tracking-[0.2em] transition-all duration-300 shadow-2xl hover:shadow-[#B85028]/40 hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer no-underline"
+            className="px-6 py-4 rounded-full bg-[#1C1917]/70 hover:bg-[#1C1917] border border-[#FAF6F0]/20 text-[#FAF6F0] text-xs font-mono uppercase tracking-[0.16em] transition-all duration-300 flex items-center gap-2 cursor-pointer no-underline"
           >
-            <span>Join Founding Cohort</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <span>Free Cohort Enrollment</span>
           </a>
         </motion.div>
       </div>

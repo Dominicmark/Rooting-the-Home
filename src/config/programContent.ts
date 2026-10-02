@@ -21,6 +21,47 @@ export interface ShowcaseItem {
   description: string;
 }
 
+export const WORKBOOK_CONFIG = {
+  title: 'Know Your Truth, Know Your Roots',
+  subtitle: 'The Essential Guided Workbook & Lineage Journal',
+  tagline: 'The official companion workbook required for every participant in the 4-week cohort.',
+  format: 'Deluxe Linen Finish · Archival Paper · Lay-Flat Edition',
+  pages: '148 Guided Pages',
+  imageUrl: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/c_limit,w_1000,q_auto,f_auto/v1790966081/Photo_from_dominicmarkude_unsskf.jpg',
+  rawImageUrl: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790966081/Photo_from_dominicmarkude_unsskf.jpg',
+  requirementNotice: 'Participation in the cohort is completely free. Owning this workbook is the single required prerequisite to join.',
+  purchaseUrl: 'https://www.knowmyroot.com/',
+  chapters: [
+    {
+      num: 'Part 01',
+      title: 'Who Made Me?',
+      desc: 'Lineage mapping, childhood environments, elder names, and first memories.',
+    },
+    {
+      num: 'Part 02',
+      title: 'What Do I Carry?',
+      desc: 'Mother tongues, family heirlooms, migratory journeys, and unwritten rules.',
+    },
+    {
+      num: 'Part 03',
+      title: 'What Do I Choose?',
+      desc: 'Conscious boundaries, generational healing, releasing burdens, and intentional practices.',
+    },
+    {
+      num: 'Part 04',
+      title: 'Who Am I Becoming?',
+      desc: 'New family traditions, ancestral blessings, and your personal Roots Showcase blueprint.',
+    },
+  ],
+  features: [
+    'Complete 4-week guided inquiry matching every live circle',
+    'Elder interview question bank & oral history templates',
+    'Family tree, homeland migration & lineage mapping charts',
+    'Lined archival spreads for reflections, recipes & personal essays',
+    'Roots Showcase artifact worksheet and personal manifesto draft',
+  ],
+};
+
 export const PROGRAM_CONFIG = {
   name: 'ROOTING THE HOME',
   format: 'Virtual (Interactive Circles & Archive Portal)',
@@ -36,22 +77,26 @@ export const PROGRAM_CONFIG = {
     { label: 'LIVE FORWARD', desc: 'Who am I becoming?' },
   ],
   pricing: {
+    cohortFee: 'FREE ($0)',
+    cohortModel: '100% Free Live Cohort',
+    prerequisite: 'Purchase of required companion workbook: Know Your Truth, Know Your Roots',
     earlyBird: {
-      label: 'EARLY BIRD',
-      price: '$65',
-      note: 'Available for first 25 founding cohort members',
+      label: 'COHORT ADMISSION',
+      price: '$0 FREE',
+      note: 'Cohort sessions and live webinars are 100% free with workbook',
     },
     standard: {
-      label: 'STANDARD',
-      price: '$85',
-      note: 'Complete four-week guided experience & showcase',
+      label: 'REQUIRED WORKBOOK',
+      price: 'Know Your Truth, Know Your Roots',
+      note: 'The companion workbook is required to follow and complete the 4 weeks',
     },
     supportedNote:
-      'Cost should never prevent participation. Limited supported places are reserved for every cohort.',
+      'The live cohort and webinars are completely free. You only need the required workbook, Know Your Truth, Know Your Roots, to follow along.',
   },
-  // Google Form registration link for the founding cohort
+  // Google Form registration link for the founding cohort & workbook
   registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSff8pej4gC14wV-0psR6BjWOigUhCiIt-c6Yefnv7PwfI0QjA/viewform',
   checkoutUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSff8pej4gC14wV-0psR6BjWOigUhCiIt-c6Yefnv7PwfI0QjA/viewform',
+  workbookPurchaseUrl: 'https://www.knowmyroot.com/',
 };
 
 export const JOURNEY_WEEKS: JourneyWeek[] = [

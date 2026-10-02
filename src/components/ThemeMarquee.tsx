@@ -6,6 +6,7 @@ interface ThemeMarqueeProps {
 }
 
 const PRIMARY_THEMES = [
+  { text: 'KNOW YOUR TRUTH, KNOW YOUR ROOTS', accent: 'terracotta' },
   { text: 'LOOK BACK', accent: 'terracotta' },
   { text: 'LOOK WITHIN', accent: 'ochre' },
   { text: 'LIVE FORWARD', accent: 'terracotta' },
@@ -17,12 +18,13 @@ const PRIMARY_THEMES = [
 ];
 
 const SECONDARY_THEMES = [
+  'KNOW YOUR TRUTH, KNOW YOUR ROOTS (REQUIRED COMPANION WORKBOOK)',
   'FAMILY MEMORY & ORAL HISTORIES',
   'ANCESTRAL SOIL & LINEAGE',
   'BELONGING BEYOND BORDERS',
   'STORIES INTERRUPTED & REMEMBERED',
   'ARCHIVAL INQUIRY & ARTIFACTS',
-  'HOME AS A LIVING PRACTICE',
+  '100% FREE COHORT ADMISSION',
   `FOUNDING COHORT · ${PROGRAM_CONFIG.kickoffDate.toUpperCase()}`,
   'COMMUNAL ROOTS SHOWCASE',
 ];

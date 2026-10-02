@@ -84,6 +84,14 @@ export const MEDIA_CONFIG = {
     },
   ],
 
+  // The Required Workbook: Know Your Truth, Know Your Roots
+  bookCover: {
+    url: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/c_limit,w_1200,q_auto,f_auto/v1790966081/Photo_from_dominicmarkude_unsskf.jpg',
+    rawUrl: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790966081/Photo_from_dominicmarkude_unsskf.jpg',
+    alt: 'Know Your Truth, Know Your Roots — The Companion Workbook & Lineage Journal',
+    caption: 'Official 4-week companion workbook required for the cohort',
+  },
+
   // Section 8: The Rooted Action
   rootedActionImage: {
     url: 'https://res.cloudinary.com/dbbw8jsjc/image/upload/v1790756703/Family_ancestral_gallery_in_arch__20260930092315_vpkwl6.jpg',

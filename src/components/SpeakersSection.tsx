@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, MapPin, X, ArrowUpRight, Award, Compass, Quote } from 'lucide-react';
-import { WEBINAR_SPEAKERS, WebinarSpeaker } from '../config/programContent';
+import { WEBINAR_SPEAKERS, WebinarSpeaker, PROGRAM_CONFIG } from '../config/programContent';
 
 interface SpeakersSectionProps {
-  onOpenEnrollment: () => void;
+  onOpenEnrollment?: () => void;
 }
 
 export function SpeakersSection({ onOpenEnrollment }: SpeakersSectionProps) {
+  void onOpenEnrollment;
   const [selectedSpeaker, setSelectedSpeaker] = useState<WebinarSpeaker | null>(null);
   const [imgErrors, setImgErrors] = useState<Record<string, boolean>>({});
 
@@ -178,12 +179,14 @@ export function SpeakersSection({ onOpenEnrollment }: SpeakersSectionProps) {
             </div>
           </div>
 
-          <button
-            onClick={onOpenEnrollment}
-            className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#B85028] hover:bg-[#9E3F1C] text-[#FFFFFF] font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-sm hover:shadow shrink-0 cursor-pointer text-center"
+          <a
+            href={PROGRAM_CONFIG.registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#B85028] hover:bg-[#9E3F1C] text-[#FFFFFF] font-mono text-xs uppercase tracking-widest font-semibold transition-all shadow-sm hover:shadow shrink-0 cursor-pointer text-center no-underline inline-block"
           >
             Join the Webinar Cohort
-          </button>
+          </a>
         </motion.div>
       </div>
 
@@ -312,15 +315,14 @@ export function SpeakersSection({ onOpenEnrollment }: SpeakersSectionProps) {
                 <span className="text-xs text-[#7A6C5B] font-sans">
                   Part of the 4-week Rooting the Home live series
                 </span>
-                <button
-                  onClick={() => {
-                    setSelectedSpeaker(null);
-                    onOpenEnrollment();
-                  }}
-                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#B85028] hover:bg-[#9E3F1C] text-white font-mono text-xs uppercase tracking-widest font-semibold transition-colors cursor-pointer text-center"
+                <a
+                  href={PROGRAM_CONFIG.registrationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#B85028] hover:bg-[#9E3F1C] text-white font-mono text-xs uppercase tracking-widest font-semibold transition-colors cursor-pointer text-center no-underline inline-block"
                 >
                   Join the Founding Cohort
-                </button>
+                </a>
               </div>
             </motion.div>
           </div>

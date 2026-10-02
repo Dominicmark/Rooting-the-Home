@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X, CheckCircle, ArrowRight, ShieldCheck, Sparkles, ExternalLink, Calendar, Clock } from 'lucide-react';
-import { PROGRAM_CONFIG } from '../config/programContent';
+import { PROGRAM_CONFIG, WORKBOOK_CONFIG } from '../config/programContent';
 import { Countdown } from './Countdown';
 
 interface EnrollmentModalProps {
@@ -25,9 +25,9 @@ export function EnrollmentModal({ isOpen, onClose, initialTier = 'early' }: Enro
   };
 
   const getTierPrice = () => {
-    if (tier === 'early') return '$65 USD';
-    if (tier === 'standard') return '$85 USD';
-    return 'Supported Place Request';
+    if (tier === 'early') return 'Workbook Order + Free Cohort';
+    if (tier === 'standard') return 'Free Cohort (I Have the Book)';
+    return 'Workbook Inquiry';
   };
 
   return (
@@ -87,7 +87,7 @@ export function EnrollmentModal({ isOpen, onClose, initialTier = 'early' }: Enro
             </div>
 
             {/* Tier Selector */}
-            <div className="grid grid-cols-3 gap-2 p-1.5 rounded-xl bg-[#FAF8F5] border border-[#E2D8CA] mb-4">
+            <div className="grid grid-cols-2 gap-2 p-1.5 rounded-xl bg-[#FAF8F5] border border-[#E2D8CA] mb-4">
               <button
                 type="button"
                 onClick={() => setTier('early')}
@@ -97,7 +97,7 @@ export function EnrollmentModal({ isOpen, onClose, initialTier = 'early' }: Enro
                     : 'text-[#7A6C5B] hover:text-[#1C1917]'
                 }`}
               >
-                Early Bird ($65)
+                I Need the Workbook
               </button>
               <button
                 type="button"
@@ -108,20 +108,43 @@ export function EnrollmentModal({ isOpen, onClose, initialTier = 'early' }: Enro
                     : 'text-[#7A6C5B] hover:text-[#1C1917]'
                 }`}
               >
-                Standard ($85)
-              </button>
-              <button
-                type="button"
-                onClick={() => setTier('supported')}
-                className={`py-2 px-3 rounded-lg text-xs font-mono transition-all cursor-pointer ${
-                  tier === 'supported'
-                    ? 'bg-[#B85028] text-white shadow-sm font-semibold'
-                    : 'text-[#7A6C5B] hover:text-[#1C1917]'
-                }`}
-              >
-                Supported Place
+                I Already Have the Book
               </button>
             </div>
+
+            {/* Workbook Visual Note */}
+            {tier === 'early' && (
+              <div className="mb-5 p-3 rounded-xl bg-[#FAF8F5] border border-[#E2D8CA] flex items-center gap-3.5">
+                <div className="w-12 h-16 rounded-md overflow-hidden shrink-0 shadow-sm border border-[#D5C7B7] bg-[#2D241E]">
+                  <img
+                    src={WORKBOOK_CONFIG.imageUrl}
+                    alt={WORKBOOK_CONFIG.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono uppercase text-[#B85028] font-semibold block">
+                    Required Companion Book
+                  </span>
+                  <h4 className="font-serif text-sm text-[#1C1917] font-medium leading-tight">
+                    Know Your Truth, Know Your Roots
+                  </h4>
+                  <p className="text-[11px] text-[#6B5D4D] font-light mt-0.5 leading-snug">
+                    Cohort sessions are 100% free with the companion workbook.
+                  </p>
+                  <a
+                    href={WORKBOOK_CONFIG.purchaseUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-[#B85028] hover:text-[#9E3F1C] font-semibold mt-1 underline underline-offset-2"
+                  >
+                    <span>Order Now on knowmyroot.com</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+            )}
 
             {/* Direct Google Form Link Callout */}
             <div className="mb-6 p-3.5 rounded-xl bg-[#FAF8F5] border border-[#E2D8CA] flex items-center justify-between gap-3">

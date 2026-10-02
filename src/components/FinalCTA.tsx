@@ -98,14 +98,22 @@ export function FinalCTA({ finalImage, onOpenEnrollment }: FinalCTAProps) {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
+            href="#workbook"
+            id="final-section-workbook-cta"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#B85028] hover:bg-[#9E3F1C] text-white font-sans text-xs sm:text-sm uppercase tracking-[0.18em] font-semibold transition-all duration-300 shadow-sm text-center flex items-center justify-center gap-2 cursor-pointer no-underline"
+          >
+            <span>Order Required Workbook</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
+
+          <a
             href={PROGRAM_CONFIG.registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
             id="final-section-join-cta"
-            className="w-full sm:w-auto px-10 py-4.5 rounded-xl bg-[#B85028] hover:bg-[#9E3F1C] text-white font-sans text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300 shadow-sm text-center flex items-center justify-center gap-2 cursor-pointer no-underline"
+            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#FAF8F5] hover:bg-[#F3ECE2] border border-[#E2D8CA] text-[#1C1917] font-sans text-xs sm:text-sm uppercase tracking-[0.18em] font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2 cursor-pointer no-underline"
           >
-            <span>Join the Founding Cohort</span>
-            <ArrowUpRight className="w-4 h-4" />
+            <span>Free Cohort Enrollment</span>
           </a>
         </motion.div>
 
@@ -116,7 +124,7 @@ export function FinalCTA({ finalImage, onOpenEnrollment }: FinalCTAProps) {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-8 text-xs text-[#7A6C5B] font-light"
         >
-          A calm, intimate space for personal discovery. Virtual kickoff begins 10 October 2026.
+          The 4-week cohort is 100% free to attend. You only need the companion workbook, <em>Know Your Truth, Know Your Roots</em>.
         </motion.p>
       </div>
     </section>

@@ -172,15 +172,15 @@ export function Countdown({ variant = 'featured', className = '', onOpenEnrollme
 
         {/* Right: Actions */}
         <div className="flex flex-col sm:flex-row md:flex-col gap-2.5 w-full md:w-auto shrink-0">
-          {onOpenEnrollment && (
-            <button
-              onClick={onOpenEnrollment}
-              className="px-5 py-2.5 rounded-full bg-[#B85028] hover:bg-[#CF653A] text-[#FAF6F0] text-xs font-mono uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[#B85028]/20"
-            >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Claim Spot</span>
-            </button>
-          )}
+          <a
+            href={PROGRAM_CONFIG.registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2.5 rounded-full bg-[#B85028] hover:bg-[#CF653A] text-[#FAF6F0] text-xs font-mono uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[#B85028]/20 no-underline"
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Claim Spot</span>
+          </a>
 
           <a
             href={googleCalendarUrl}

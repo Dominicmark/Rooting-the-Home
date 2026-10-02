@@ -54,13 +54,18 @@ export function Footer({ onOpenEnrollment }: FooterProps) {
                 </a>
               </li>
               <li>
+                <a href="#workbook" className="hover:text-[#B85028] transition-colors font-medium text-[#B85028]">
+                  The Workbook
+                </a>
+              </li>
+              <li>
                 <a href="#speakers" className="hover:text-[#1C1917] transition-colors">
                   Webinar Speakers
                 </a>
               </li>
               <li>
                 <a href="#practice" className="hover:text-[#1C1917] transition-colors">
-                  The Practice & Harvest
+                  The Practice &amp; Harvest
                 </a>
               </li>
               <li>
@@ -70,7 +75,7 @@ export function Footer({ onOpenEnrollment }: FooterProps) {
               </li>
               <li>
                 <a href="#pricing" className="hover:text-[#1C1917] transition-colors">
-                  Founding Cohort
+                  Free Cohort &amp; Book
                 </a>
               </li>
             </ul>
@@ -79,10 +84,10 @@ export function Footer({ onOpenEnrollment }: FooterProps) {
           {/* Action & Hosting Support (Col 9-12) */}
           <div className="md:col-span-4 space-y-4">
             <span className="text-[11px] font-mono uppercase tracking-[0.24em] text-[#B85028] font-semibold">
-              Founding Enrollment
+              Free Cohort Participation
             </span>
             <p className="text-xs text-[#52473D] font-light leading-relaxed">
-              Early bird places are strictly limited to the first 25 founding cohort participants.
+              Admission is 100% free. The companion workbook, <em>Know Your Truth, Know Your Roots</em>, is required for all participants.
             </p>
             <div className="pt-2">
               <a
@@ -91,7 +96,7 @@ export function Footer({ onOpenEnrollment }: FooterProps) {
                 rel="noopener noreferrer"
                 className="w-full py-3 px-4 rounded-xl bg-[#B85028] hover:bg-[#9E3F1C] text-xs font-mono uppercase tracking-wider text-white transition-colors text-center flex items-center justify-center gap-2 no-underline shadow-sm font-semibold"
               >
-                <span>Join Rooting the Home</span>
+                <span>Get Workbook &amp; Join Free</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>

@@ -9,6 +9,7 @@ import { Hero } from './components/Hero';
 import { TheQuestion } from './components/TheQuestion';
 import { WhatIsRooting } from './components/WhatIsRooting';
 import { JourneySection } from './components/JourneySection';
+import { WorkbookSection } from './components/WorkbookSection';
 import { MemoryGallery } from './components/MemoryGallery';
 import { ThePractice } from './components/ThePractice';
 import { SpeakersSection } from './components/SpeakersSection';
@@ -68,7 +69,10 @@ export default function App() {
         {/* 6. The Journey — Four Weeks. Four Questions. */}
         <JourneySection />
 
-        {/* 7. Guiding Voices & Webinar Speakers */}
+        {/* 7. The Required Companion Workbook — Know Your Truth, Know Your Roots */}
+        <WorkbookSection onOpenEnrollment={() => handleOpenEnrollment('early')} />
+
+        {/* 8. Guiding Voices & Webinar Speakers */}
         <SpeakersSection onOpenEnrollment={() => handleOpenEnrollment('early')} />
 
         {/* 8. The Practice & The Harvest — An Active Quest */}

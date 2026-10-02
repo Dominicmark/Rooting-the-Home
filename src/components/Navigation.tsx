@@ -21,9 +21,10 @@ export function Navigation({ onOpenEnrollment }: NavigationProps) {
 
   const navLinks = [
     { name: 'The Journey', href: '#journey' },
+    { name: 'The Workbook', href: '#workbook' },
     { name: 'Speakers', href: '#speakers' },
     { name: 'The Practice', href: '#practice' },
-    { name: 'Cohort', href: '#pricing' },
+    { name: 'Free Cohort', href: '#pricing' },
   ];
 
   return (
@@ -37,13 +38,15 @@ export function Navigation({ onOpenEnrollment }: NavigationProps) {
           </span>
         </div>
         <span className="text-[#A89885] hidden sm:inline">·</span>
+        <span className="text-[#B85028] font-semibold hidden md:inline">100% Free Cohort (Workbook Required)</span>
+        <span className="text-[#A89885] hidden sm:inline">·</span>
         <Countdown variant="compact" className="hidden xs:inline-flex" />
-        <button
-          onClick={() => onOpenEnrollment('early')}
+        <a
+          href="#workbook"
           className="ml-1 sm:ml-2 underline text-[#B85028] hover:text-[#8F3B1A] transition-colors cursor-pointer hidden sm:inline font-medium"
         >
-          Reserve Spot &rarr;
-        </button>
+          Get Workbook &rarr;
+        </a>
       </div>
 
       {/* 2. Main Navigation Bar */}

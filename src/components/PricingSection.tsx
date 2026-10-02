@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Check, Clock, Calendar, Globe, ArrowRight, Sparkles } from 'lucide-react';
-import { PROGRAM_CONFIG } from '../config/programContent';
+import { PROGRAM_CONFIG, WORKBOOK_CONFIG } from '../config/programContent';
 import { Countdown } from './Countdown';
 
 interface PricingSectionProps {
@@ -105,9 +105,9 @@ export function PricingSection({ onSelectTier }: PricingSectionProps) {
           </div>
         </motion.div>
 
-        {/* Editorial Pricing Cards */}
+        {/* Editorial Participation Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Tier 1: Early Bird */}
+          {/* Card 1: The Required Workbook */}
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,32 +116,45 @@ export function PricingSection({ onSelectTier }: PricingSectionProps) {
             className="p-8 sm:p-10 rounded-2xl bg-[#FFFFFF] border-2 border-[#B85028] relative flex flex-col justify-between shadow-md"
           >
             <div className="absolute -top-3.5 right-6 px-3.5 py-1 rounded-full bg-[#B85028] text-white text-[10px] font-mono uppercase tracking-[0.2em] font-medium">
-              Founding Tier
+              Mandatory Prerequisite
             </div>
 
             <div>
-              <span className="text-xs font-mono uppercase tracking-[0.24em] text-[#B85028] block mb-2 font-semibold">
-                {PROGRAM_CONFIG.pricing.earlyBird.label}
+              <span className="text-xs font-mono uppercase tracking-[0.24em] text-[#B85028] block mb-3 font-semibold">
+                Required Workbook
               </span>
 
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="font-serif text-5xl sm:text-6xl text-[#1C1917] font-normal">
-                  US$65
-                </span>
-                <span className="text-xs font-mono text-[#7A6C5B]">one-time</span>
+              {/* Book Photo Thumbnail & Title */}
+              <div className="flex items-center gap-4 mb-5 p-3 rounded-xl bg-[#FAF8F5] border border-[#E2D8CA]">
+                <div className="w-16 h-22 rounded-lg overflow-hidden shrink-0 shadow-md border border-[#D5C7B7] bg-[#2D241E]">
+                  <img
+                    src={WORKBOOK_CONFIG.imageUrl}
+                    alt={WORKBOOK_CONFIG.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl sm:text-2xl text-[#1C1917] font-normal leading-tight">
+                    Know Your Truth, Know Your Roots
+                  </h3>
+                  <span className="text-xs font-mono text-[#B85028] block mt-1 font-medium">
+                    Official Companion Guide
+                  </span>
+                </div>
               </div>
 
-              <p className="text-xs text-[#6B5D4D] font-light mb-8">
-                {PROGRAM_CONFIG.pricing.earlyBird.note}
+              <p className="text-xs text-[#6B5D4D] font-light mb-6">
+                Every cohort participant must have the official workbook to follow the weekly exercises, maps, and reflections.
               </p>
 
               <div className="space-y-3 pt-4 border-t border-[#EAE3D6]">
                 {[
-                  'Four live guided virtual circles (90 mins each)',
-                  'Live fireside sessions with guest speakers',
-                  'Weekly asynchronous inquiry & reflection guides',
-                  'Participant seat at the final Roots Showcase',
-                  'Lifetime access to personal lineage templates',
+                  '148-page archival lay-flat linen companion journal',
+                  'Week-by-week prompts matching all live circles',
+                  'Elder dialogue question bank & oral recording sheets',
+                  'Lineage matrix & ancestral homeland mapping charts',
+                  'Permanent personal heirloom to pass down to future generations',
                 ].map((feature) => (
                   <div key={feature} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-[#B85028] shrink-0 mt-0.5" />
@@ -155,19 +168,19 @@ export function PricingSection({ onSelectTier }: PricingSectionProps) {
 
             <div className="mt-8">
               <a
-                href={PROGRAM_CONFIG.registrationUrl}
+                href={WORKBOOK_CONFIG.purchaseUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                id="pricing-early-bird-cta"
+                id="pricing-order-workbook-cta"
                 className="w-full py-4 rounded-xl bg-[#B85028] hover:bg-[#9E3F1C] text-white text-xs font-sans uppercase tracking-[0.18em] font-semibold transition-all duration-300 shadow-sm text-center flex items-center justify-center gap-2 cursor-pointer no-underline"
               >
-                <span>Join the Founding Cohort</span>
+                <span>Order Now on knowmyroot.com</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </motion.div>
 
-          {/* Tier 2: Standard */}
+          {/* Card 2: Free Cohort Admission */}
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -177,27 +190,27 @@ export function PricingSection({ onSelectTier }: PricingSectionProps) {
           >
             <div>
               <span className="text-xs font-mono uppercase tracking-[0.24em] text-[#7A6C5B] block mb-2 font-medium">
-                {PROGRAM_CONFIG.pricing.standard.label}
+                Live Cohort Access
               </span>
 
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="font-serif text-5xl sm:text-6xl text-[#1C1917] font-normal">
-                  US$85
+                  $0 FREE
                 </span>
-                <span className="text-xs font-mono text-[#7A6C5B]">one-time</span>
+                <span className="text-xs font-mono text-[#B85028] font-medium">zero tuition</span>
               </div>
 
               <p className="text-xs text-[#7A6C5B] font-light mb-8">
-                {PROGRAM_CONFIG.pricing.standard.note}
+                Cohort sessions and live webinar series are 100% free with your workbook copy.
               </p>
 
               <div className="space-y-3 pt-4 border-t border-[#EAE3D6]">
                 {[
                   'Four live guided virtual circles (90 mins each)',
-                  'Live fireside sessions with guest speakers',
-                  'Weekly asynchronous inquiry & reflection guides',
-                  'Participant seat at the final Roots Showcase',
-                  'Lifetime access to personal lineage templates',
+                  'Live fireside sessions with guest speakers & Q&A',
+                  'Intimate small-group breakout discussions',
+                  'Participant seat at the final Roots Showcase table',
+                  'Private participant portal and reflection circle',
                 ].map((feature) => (
                   <div key={feature} className="flex items-start gap-3">
                     <Check className="w-4 h-4 text-[#7A6C5B] shrink-0 mt-0.5" />
@@ -210,19 +223,21 @@ export function PricingSection({ onSelectTier }: PricingSectionProps) {
             </div>
 
             <div className="mt-8">
-              <button
-                onClick={() => onSelectTier('standard')}
-                id="pricing-standard-cta"
-                className="w-full py-4 rounded-xl border border-[#B85028] text-[#B85028] hover:bg-[#B85028] hover:text-white text-xs font-sans uppercase tracking-[0.18em] font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2 cursor-pointer"
+              <a
+                href={PROGRAM_CONFIG.registrationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                id="pricing-enroll-free-cta"
+                className="w-full py-4 rounded-xl border border-[#B85028] text-[#B85028] hover:bg-[#B85028] hover:text-white text-xs font-sans uppercase tracking-[0.18em] font-semibold transition-all duration-300 text-center flex items-center justify-center gap-2 cursor-pointer no-underline"
               >
-                <span>Select Standard Tier</span>
+                <span>Enroll Free (With Workbook)</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </motion.div>
         </div>
 
-        {/* Supported Places Callout */}
+        {/* Workbook Requirement Notice */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -232,20 +247,22 @@ export function PricingSection({ onSelectTier }: PricingSectionProps) {
         >
           <div className="space-y-1">
             <h4 className="font-serif text-lg text-[#1C1917]">
-              Limited supported places available.
+              Free Cohort · Essential Companion Workbook
             </h4>
             <p className="text-xs sm:text-sm text-[#6B5D4D] font-light max-w-2xl">
-              {PROGRAM_CONFIG.pricing.supportedNote}
+              There is no fee for the four weeks of live facilitation or webinars. Owning the workbook, <em>Know Your Truth, Know Your Roots</em>, ensures everyone writes and creates in unison.
             </p>
           </div>
 
-          <button
-            onClick={() => onSelectTier('supported')}
+          <a
+            href={PROGRAM_CONFIG.registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             id="apply-supported-place-btn"
-            className="shrink-0 px-5 py-2.5 rounded-lg border border-[#B85028] text-xs font-mono uppercase tracking-wider text-[#B85028] hover:bg-[#B85028] hover:text-white transition-colors cursor-pointer font-medium"
+            className="shrink-0 px-5 py-2.5 rounded-lg bg-[#B85028] text-xs font-mono uppercase tracking-wider text-white hover:bg-[#9E3F1C] transition-colors cursor-pointer font-medium no-underline shadow-xs"
           >
-            Request Supported Place
-          </button>
+            Get the Workbook
+          </a>
         </motion.div>
 
         {/* Subtitle / Program Info line */}
