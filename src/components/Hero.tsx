@@ -57,8 +57,8 @@ export function Hero({
         )}
 
         {/* Minimal Subtle Scrim Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0C0A] via-[#0E0C0A]/40 to-[#0E0C0A]/60 pointer-events-none" />
-        <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917] via-[#1C1917]/50 to-[#1C1917]/65 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/20 pointer-events-none" />
       </div>
 
       {/* 2. Top Spacer for Sticky Nav */}
@@ -72,13 +72,13 @@ export function Hero({
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#1A1612]/80 backdrop-blur-md border border-[#C98B32]/60 text-[#FAF6F0] mb-6 shadow-xl shadow-black/40"
+          className="inline-flex items-center gap-2.5 px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#1C1917]/85 backdrop-blur-md border border-[#B85028]/60 text-white mb-6 shadow-md"
         >
-          <Calendar className="w-4 h-4 text-[#E28863]" />
+          <Calendar className="w-4 h-4 text-[#B85028]" />
           <span className="font-mono text-xs sm:text-sm font-semibold tracking-[0.18em] uppercase text-[#FAF6F0]">
             Live Kickoff: {PROGRAM_CONFIG.kickoffDate}
           </span>
-          <span className="hidden sm:inline w-1 h-1 rounded-full bg-[#C98B32]" />
+          <span className="hidden sm:inline w-1 h-1 rounded-full bg-[#B85028]" />
           <span className="hidden sm:inline font-mono text-xs text-[#E4DCD0] tracking-wider">
             4:30 PM CAT (Virtual)
           </span>
@@ -111,9 +111,9 @@ export function Hero({
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45 }}
-          className="mt-6 sm:mt-8 font-sans text-sm sm:text-base md:text-lg text-[#CBBFB0] font-light max-w-xl leading-relaxed tracking-wide"
+          className="mt-6 sm:mt-8 font-sans text-sm sm:text-base md:text-lg text-[#CBBFB0] font-light max-w-lg leading-relaxed tracking-wide"
         >
-          A four-week guided virtual journey exploring identity, family memory, belonging, and cultural connection.
+          A four-week guided journey into identity, family, and the living stories that shaped you.
         </motion.p>
 
         {/* Live Kickoff Countdown */}

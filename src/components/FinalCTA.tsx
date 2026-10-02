@@ -13,7 +13,7 @@ export function FinalCTA({ finalImage, onOpenEnrollment }: FinalCTAProps) {
   return (
     <section
       id="final-cta"
-      className="relative w-full py-36 sm:py-48 bg-[#0E0C0A] text-[#FAF6F0] overflow-hidden flex items-center justify-center"
+      className="relative w-full py-32 sm:py-44 bg-[#FAF8F5] text-[#1C1917] overflow-hidden flex items-center justify-center border-t border-[#E8E0D4]"
     >
       {/* Cinematic Background Image Layer with gentle zoom */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -24,12 +24,11 @@ export function FinalCTA({ finalImage, onOpenEnrollment }: FinalCTAProps) {
           transition={{ duration: 1.8, ease: 'easeOut' }}
           src={finalImage.url}
           alt={finalImage.alt}
-          className="w-full h-full object-cover object-center filter brightness-[0.38] saturate-[0.85]"
+          className="w-full h-full object-cover object-center filter brightness-[0.95] saturate-[0.8] opacity-20"
           loading="lazy"
         />
-        {/* Layered dark & earthy gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0C0A] via-[#0E0C0A]/70 to-[#0E0C0A]/85" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(14,12,10,0.85)_100%)]" />
+        {/* Layered natural gradients */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-[#FAF8F5]/90 to-[#FAF8F5]/85" />
       </div>
 
       {/* Foreground Content */}
@@ -39,9 +38,9 @@ export function FinalCTA({ finalImage, onOpenEnrollment }: FinalCTAProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FAF6F0]/20 bg-[#161310]/60 backdrop-blur-md text-[11px] font-mono tracking-[0.24em] uppercase text-[#E4DCD0] mb-8"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#E2D8CA] bg-[#F5EFE6] text-[11px] font-mono tracking-[0.24em] uppercase text-[#B85028] mb-8 font-medium"
         >
-          <Sparkles className="w-3.5 h-3.5 text-[#C98B32]" />
+          <Sparkles className="w-3.5 h-3.5" />
           <span>Founding Cohort · 10 October 2026</span>
         </motion.div>
 
@@ -53,13 +52,13 @@ export function FinalCTA({ finalImage, onOpenEnrollment }: FinalCTAProps) {
           transition={{ duration: 0.95, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-4"
         >
-          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#FAF6F0] font-normal tracking-tight leading-[1.1]">
+          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-[#1C1917] font-normal tracking-tight leading-[1.1]">
             YOU DON’T NEED TO HAVE
             <br />
-            <span className="text-[#A89885] italic">ALL THE ANSWERS.</span>
+            <span className="text-[#6B5D4D] italic">ALL THE ANSWERS.</span>
           </h2>
 
-          <p className="font-serif text-2xl sm:text-4xl text-[#E28863] font-light">
+          <p className="font-serif text-2xl sm:text-4xl text-[#B85028] font-light">
             START WITH THE QUESTIONS.
           </p>
         </motion.div>
@@ -70,12 +69,12 @@ export function FinalCTA({ finalImage, onOpenEnrollment }: FinalCTAProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.85, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 flex items-center justify-center gap-6 font-serif text-sm sm:text-base uppercase tracking-[0.24em] text-[#CBBFB0]"
+          className="mt-8 flex items-center justify-center gap-6 font-serif text-sm sm:text-base uppercase tracking-[0.24em] text-[#54493C]"
         >
           <span>Look back.</span>
-          <span className="w-1 h-1 rounded-full bg-[#54493C]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#B85028]" />
           <span>Look within.</span>
-          <span className="w-1 h-1 rounded-full bg-[#54493C]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#B85028]" />
           <span>Live forward.</span>
         </motion.div>
 
@@ -103,7 +102,7 @@ export function FinalCTA({ finalImage, onOpenEnrollment }: FinalCTAProps) {
             target="_blank"
             rel="noopener noreferrer"
             id="final-section-join-cta"
-            className="w-full sm:w-auto px-10 py-5 rounded-xl bg-[#B85028] hover:bg-[#CF653A] text-[#FAF6F0] font-sans text-xs sm:text-sm uppercase tracking-[0.2em] font-medium transition-all duration-300 shadow-2xl hover:shadow-[#B85028]/30 hover:-translate-y-0.5 active:translate-y-0 text-center flex items-center justify-center gap-2 cursor-pointer no-underline"
+            className="w-full sm:w-auto px-10 py-4.5 rounded-xl bg-[#B85028] hover:bg-[#9E3F1C] text-white font-sans text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300 shadow-sm text-center flex items-center justify-center gap-2 cursor-pointer no-underline"
           >
             <span>Join the Founding Cohort</span>
             <ArrowUpRight className="w-4 h-4" />

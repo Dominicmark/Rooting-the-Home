@@ -42,21 +42,44 @@ export function TheQuestion() {
           </h2>
         </motion.div>
 
-        {/* Reflective prose below */}
+        {/* Reflective prose & concise bullet points */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="mt-14 max-w-2xl mx-auto"
+          transition={{ duration: 1, delay: 0.25 }}
+          className="mt-12 max-w-2xl mx-auto space-y-6"
         >
-          <p className="font-sans text-base sm:text-lg md:text-xl text-[#3D352E] leading-relaxed font-normal tracking-wide">
-            Our identities are rarely contained in a passport, a profession or a single place.
+          <p className="font-serif text-xl sm:text-2xl text-[#2E2822] font-normal leading-snug">
+            Identity is rarely contained in a passport, a city, or a single border.
           </p>
-          <p className="mt-6 font-sans text-sm sm:text-base md:text-lg text-[#6B5D4D] leading-relaxed font-light">
-            They are shaped by people, names, languages, migrations, memories, relationships,
-            traditions and stories passed down — and sometimes by the stories that were interrupted or forgotten.
-          </p>
+
+          {/* Punchy emotive bullet points */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 text-left">
+            <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E8DFC8]/90">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B85028] block mb-2" />
+              <h4 className="font-serif text-sm font-medium text-[#1A1612]">Inherited Voices</h4>
+              <p className="text-xs text-[#6B5D4D] mt-1 font-light leading-relaxed">
+                The names, tongues, and dishes carried across water.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E8DFC8]/90">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B85028] block mb-2" />
+              <h4 className="font-serif text-sm font-medium text-[#1A1612]">Silent Silences</h4>
+              <p className="text-xs text-[#6B5D4D] mt-1 font-light leading-relaxed">
+                The stories interrupted, buried, or left unspoken.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E8DFC8]/90">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#B85028] block mb-2" />
+              <h4 className="font-serif text-sm font-medium text-[#1A1612]">Living Agency</h4>
+              <p className="text-xs text-[#6B5D4D] mt-1 font-light leading-relaxed">
+                What you consciously decide to honor and keep.
+              </p>
+            </div>
+          </div>
         </motion.div>
 
         {/* Visual anchor / breathing divider */}

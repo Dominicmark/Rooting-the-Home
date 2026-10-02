@@ -10,17 +10,13 @@ import { TheQuestion } from './components/TheQuestion';
 import { WhatIsRooting } from './components/WhatIsRooting';
 import { JourneySection } from './components/JourneySection';
 import { MemoryGallery } from './components/MemoryGallery';
-import { WhatYouWillDo } from './components/WhatYouWillDo';
-import { RootsQuest } from './components/RootsQuest';
-import { RootedAction } from './components/RootedAction';
-import { Showcase } from './components/Showcase';
+import { ThePractice } from './components/ThePractice';
 import { SpeakersSection } from './components/SpeakersSection';
 import { WhoIsThisFor } from './components/WhoIsThisFor';
 import { PricingSection } from './components/PricingSection';
 import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { EnrollmentModal } from './components/EnrollmentModal';
-import { HighlightsOverview } from './components/HighlightsOverview';
 import { ThemeMarquee } from './components/ThemeMarquee';
 import { MEDIA_CONFIG, HERO_VIDEO_URL } from './config/mediaConfig';
 
@@ -38,21 +34,14 @@ export default function App() {
   };
 
   const handleExploreJourney = () => {
-    const el = document.getElementById('highlights');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleScrollToSection = (sectionId: string) => {
-    const el = document.getElementById(sectionId);
+    const el = document.getElementById('the-question');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#0E0C0A] text-[#FAF6F0] selection:bg-[#B85028] selection:text-[#FAF6F0] overflow-x-hidden font-sans">
+    <div className="min-h-screen bg-[#FAF8F5] text-[#1C1917] selection:bg-[#B85028] selection:text-[#FAF8F5] overflow-x-hidden font-sans">
       {/* 1. Minimal Sticky Navigation */}
       <Navigation
         onOpenEnrollment={handleOpenEnrollment}
@@ -67,56 +56,41 @@ export default function App() {
           onExploreJourney={handleExploreJourney}
         />
 
-        {/* Continuous Scrolling Marquee of Program Themes */}
+        {/* 3. Continuous Scrolling Marquee of Program Themes */}
         <ThemeMarquee />
 
-        {/* 3. At-a-Glance Highlights: Quick summary of the different sections */}
-        <HighlightsOverview
-          onSelectSection={handleScrollToSection}
-          onOpenEnrollment={() => handleOpenEnrollment('early')}
-        />
-
-        {/* 4. Section 2 — The Question (Reflective & Spacious) */}
+        {/* 4. The Premise — The Reflective Inquiry */}
         <TheQuestion />
 
-        {/* 4. Section 3 — What is Rooting the Home? (Split-screen editorial layout) */}
+        {/* 5. The Intention — What is Rooting the Home? */}
         <WhatIsRooting image={MEDIA_CONFIG.familyImage1} />
 
-        {/* 5. Section 4 — The Journey (Four Weeks. Four Questions.) */}
+        {/* 6. The Journey — Four Weeks. Four Questions. */}
         <JourneySection />
 
-        {/* 6. Section 5 — Roots are Stories (Archival collage & memory gallery) */}
-        <MemoryGallery />
-
-        {/* 7. Section 6 — What You Will Do (This is not a webinar. 01–06 visual sequence) */}
-        <WhatYouWillDo />
-
-        {/* 8. Section 7 — Your Roots Quest (Start with a question) */}
-        <RootsQuest />
-
-        {/* 9. Section 8 — The Rooted Action (Knowing is only the beginning) */}
-        <RootedAction image={MEDIA_CONFIG.rootedActionImage} />
-
-        {/* 10. Section 9 — The Roots Showcase (What we found · Community table) */}
-        <Showcase showcaseImage={MEDIA_CONFIG.showcaseImage} />
-
-        {/* 11. Section 10 — Guiding Voices & Webinar Speakers */}
+        {/* 7. Guiding Voices & Webinar Speakers */}
         <SpeakersSection onOpenEnrollment={() => handleOpenEnrollment('early')} />
 
-        {/* 12. Section 11 — Who is this for? (For people who have questions about home) */}
+        {/* 8. The Practice & The Harvest — An Active Quest */}
+        <ThePractice onOpenEnrollment={() => handleOpenEnrollment('early')} />
+
+        {/* 9. The Archive of What We Carry */}
+        <MemoryGallery />
+
+        {/* 10. The Community — Who Is This For? */}
         <WhoIsThisFor />
 
-        {/* 12. Section 11 — Founding Cohort (Editorial pricing & local timezone selector) */}
+        {/* 11. Founding Cohort — Dates, Timezones & Enrollment */}
         <PricingSection onSelectTier={handleOpenEnrollment} />
 
-        {/* 13. Section 12 — Final Emotional CTA (Calm, memorable closing) */}
+        {/* 12. Final Emotional Invitation */}
         <FinalCTA
           finalImage={MEDIA_CONFIG.finalImage}
           onOpenEnrollment={handleOpenEnrollment}
         />
       </main>
 
-      {/* 14. Footer */}
+      {/* 13. Clean Natural Footer */}
       <Footer
         onOpenEnrollment={handleOpenEnrollment}
       />

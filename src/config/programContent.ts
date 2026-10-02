@@ -10,6 +10,7 @@ export interface JourneyWeek {
   title: string;
   question: string;
   description: string;
+  takeaways: string[];
   themes: string[];
   inquiry: string;
 }
@@ -22,13 +23,13 @@ export interface ShowcaseItem {
 
 export const PROGRAM_CONFIG = {
   name: 'ROOTING THE HOME',
-  format: 'Virtual (Zoom & Guided Archive Portal)',
+  format: 'Virtual (Interactive Circles & Archive Portal)',
   duration: 'Four weeks',
   kickoffDate: '10 October 2026',
   kickoffTargetDate: '2026-10-10T16:30:00+02:00',
   kickoffTimeRwanda: '4:30 PM – 6:30 PM Rwanda Time (CAT / UTC+2)',
   cohortTag: 'Founding Cohort / Pilot',
-  heroTagline: 'A four-week journey into identity, family, belonging and the stories that shaped us.',
+  heroTagline: 'Four weeks into identity, family, belonging, and the stories that made you.',
   deeperMovement: [
     { label: 'LOOK BACK', desc: 'Who made me? What do I carry?' },
     { label: 'LOOK WITHIN', desc: 'What do I choose?' },
@@ -46,7 +47,7 @@ export const PROGRAM_CONFIG = {
       note: 'Complete four-week guided experience & showcase',
     },
     supportedNote:
-      'Limited supported places available. We want cost not to prevent participation. A limited number of supported places are available.',
+      'Cost should never prevent participation. Limited supported places are reserved for every cohort.',
   },
   // Google Form registration link for the founding cohort
   registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSff8pej4gC14wV-0psR6BjWOigUhCiIt-c6Yefnv7PwfI0QjA/viewform',
@@ -58,36 +59,53 @@ export const JOURNEY_WEEKS: JourneyWeek[] = [
     weekNumber: 'WEEK 01',
     title: 'WHO MADE ME?',
     question: 'Where does your beginning live?',
-    description: 'Explore the people, stories and experiences that shaped your beginning.',
-    themes: ['Lineage & elders', 'First environments', 'Inherited voices'],
-    inquiry: 'Whose shoulders, struggles, and deliberate sacrifices made room for your arrival?',
+    description: 'Uncover the people, places, and origins that shaped your earliest world.',
+    takeaways: [
+      'Map ancestral lineage and elders',
+      'Trace first sensory environments',
+      'Listen for inherited voices and beliefs',
+    ],
+    themes: ['Lineage & elders', 'First homes', 'Inherited voices'],
+    inquiry: 'Whose shoulders made room for your arrival?',
   },
   {
     weekNumber: 'WEEK 02',
     title: 'WHAT DO I CARRY?',
-    question: 'What came across the waters, borders, and quiet rooms?',
-    description:
-      'Investigate the names, languages, traditions, values, stories, objects and practices that travelled through your family.',
-    themes: ['Names & nicknames', 'Lost or preserved tongues', 'Family rituals & heirlooms'],
-    inquiry: 'What silent weights or treasured gifts have been passed into your hands without question?',
+    question: 'What came across the waters and quiet rooms?',
+    description: 'Investigate the names, tongues, rituals, and unspoken heirlooms traveling through your bloodline.',
+    takeaways: [
+      'Unpack the meanings behind names',
+      'Acknowledge lost or quieted mother tongues',
+      'Identify family traditions and silent weights',
+    ],
+    themes: ['Ancestral names', 'Mother tongues', 'Family heirlooms'],
+    inquiry: 'What silent weights or gifts were placed in your hands?',
   },
   {
     weekNumber: 'WEEK 03',
     title: 'WHAT DO I CHOOSE?',
     question: 'Where does curiosity turn into agency?',
-    description:
-      'Move from investigation to agency. Decide what you want to reclaim, preserve, question or embody.',
-    themes: ['Reclaiming forgotten pieces', 'Conscious boundaries', 'Forgiveness & discernment'],
-    inquiry: 'You are not obligated to keep everything. What do you choose to honor, and what do you choose to lay down?',
+    description: 'Move from passive inheritance to conscious agency. Decide what to honor and what to release.',
+    takeaways: [
+      'Reclaim forgotten cultural practices',
+      'Establish loving generational boundaries',
+      'Practice forgiveness and clear discernment',
+    ],
+    themes: ['Reclaimed pieces', 'Conscious boundaries', 'Discernment'],
+    inquiry: 'What do you choose to honor, and what do you choose to lay down?',
   },
   {
     weekNumber: 'WEEK 04',
     title: 'WHO AM I BECOMING?',
-    question: 'How do your roots ground your next steps?',
-    description:
-      'Bring your discoveries together and consider what you want to carry forward.',
-    themes: ['Generational continuity', 'New family rituals', 'The Roots Showcase artifact'],
-    inquiry: 'How will the descendants of your memory know what mattered deeply to you?',
+    question: 'How do roots ground your next steps?',
+    description: 'Synthesize your discoveries into a living legacy and craft your personal Roots artifact.',
+    takeaways: [
+      'Define new family rituals for tomorrow',
+      'Draft your personal manifesto of belonging',
+      'Share your piece at the Roots Showcase',
+    ],
+    themes: ['Living rituals', 'Future lineage', 'Roots Showcase'],
+    inquiry: 'How will your descendants know what mattered deeply to you?',
   },
 ];
 
@@ -125,58 +143,47 @@ export const ROOT_QUESTIONS = [
 ];
 
 export const ROOTED_ACTIONS = [
-  { title: 'Learning a family language', desc: 'Taking the first patient step into the words and sounds of your forebears.' },
-  { title: 'Reconnecting with a relative', desc: 'Calling an elder or cousin to listen without agenda or haste.' },
-  { title: 'Documenting a family story', desc: 'Recording an oral memory before details soften with time.' },
-  { title: 'Learning a family recipe', desc: 'Cooking the stew, bread, or sauce that tastes like home in your own kitchen.' },
-  { title: 'Researching a meaningful place', desc: 'Tracing the village, township, street, or river where your people lived.' },
-  { title: 'Reviving a tradition', desc: 'Reintroducing a seasonal gathering, blessing, or storytelling ritual.' },
-  { title: 'Changing how you introduce yourself', desc: 'Speaking your full name, meaning, or roots with intentional ease.' },
-  { title: 'Choosing what you want to pass on', desc: 'Writing a letter or personal manifesto for the generations ahead.' },
+  { title: 'Reclaim a Mother Tongue', desc: 'Take one patient step into the words and sounds of your forebears.' },
+  { title: 'The Elder Dialogue', desc: 'Call an elder or relative to listen without agenda or haste.' },
+  { title: 'Record an Oral Memory', desc: 'Preserve an audio story before details soften with time.' },
+  { title: 'Cook an Inherited Dish', desc: 'Recreate a grandmother’s recipe in your own kitchen.' },
+  { title: 'Trace Ancestral Soil', desc: 'Map the village, street, or river where your people began.' },
+  { title: 'Revive a Tradition', desc: 'Reintroduce a seasonal blessing, greeting, or family ritual.' },
 ];
 
 export const SHOWCASE_ARTIFACTS: ShowcaseItem[] = [
-  { name: 'Family Tree & Lineage Map', category: 'Archive', description: 'Visual mapping of generations and connections' },
-  { name: 'Photograph + Story Essay', category: 'Memory', description: 'A restored archive photo paired with its forgotten context' },
-  { name: 'Migration & Homeland Map', category: 'Geography', description: 'The physical journey across lands and waters' },
-  { name: 'Recorded Elder Interview', category: 'Voice', description: 'Audio or video preserving the voice of someone who came before' },
-  { name: 'Handwritten Family Recipe', category: 'Taste', description: 'The exact proportions and kitchen memories of a signature dish' },
-  { name: 'Personal Poem or Ode', category: 'Word', description: 'Reflective writing on names, origins, and personal rootedness' },
-  { name: 'Letter to the Past or Future', category: 'Epistle', description: 'Words written to an ancestor or an unborn grandchild' },
-  { name: 'Revised Autobiography', category: 'Identity', description: 'A rewrite of who you are, grounded in your complete story' },
-  { name: 'Audio Soundscape', category: 'Sound', description: 'Atmospheric recordings of home, language, and laughter' },
-  { name: 'Reclaimed Cultural Practice', category: 'Living Tradition', description: 'A restored ritual, greeting, or home blessing' },
+  { name: 'Family Lineage Map', category: 'Archive', description: 'Visual mapping of generations and connections' },
+  { name: 'Photo & Memory Essay', category: 'Memory', description: 'A restored archive photo paired with its forgotten context' },
+  { name: 'Migration Odyssey Map', category: 'Geography', description: 'The physical journey across lands and waters' },
+  { name: 'Elder Voice Recording', category: 'Voice', description: 'Preserving the voice of someone who came before' },
+  { name: 'Handwritten Recipe', category: 'Taste', description: 'Exact proportions and kitchen memories of home' },
+  { name: 'Manifesto of Belonging', category: 'Identity', description: 'A personal rewrite of who you are, grounded in your complete story' },
 ];
 
 export const WHO_IS_THIS_FOR = [
   {
-    title: 'People whose lives stretch across cultures',
-    text: 'Moving between worlds, languages, or diasporic spaces, seeking an integrated sense of self.',
+    title: 'Living Across Cultures',
+    text: 'Moving between worlds, languages, or diaspora spaces—seeking an integrated anchor in self.',
   },
   {
-    title: 'People living away from where their families began',
-    text: 'Navigating geographic distance while holding a quiet hunger for connection to their origins.',
+    title: 'Keepers of Family Memory',
+    text: 'Eager to record oral memories, preserve recipes, and document roots before custodians pass.',
   },
   {
-    title: 'People curious about their family history',
-    text: 'Those ready to ask the questions they didn’t have the vocabulary or courage to ask earlier.',
+    title: 'Asking Unspoken Questions',
+    text: 'Curious about migrations, naming lineages, or interrupted stories never voiced at dinner tables.',
   },
   {
-    title: 'People who feel connected to some parts and distant from others',
-    text: 'Honoring that heritage is often messy, fragmented, or uneven—and welcoming all of it.',
+    title: 'Anchoring the Next Generation',
+    text: 'Parents wanting to ground their children in deep roots before the world defines them.',
   },
-  {
-    title: 'Parents thinking about what they want to pass forward',
-    text: 'Wanting to anchor their children with deep roots before the world tells them who they are.',
-  },
-  {
-    title: 'People who have questions they never thought to ask',
-    text: 'Realizing that time moves fast, and the custodians of family memory won’t be here forever.',
-  },
-  {
-    title: 'People who simply want to understand themselves more deeply',
-    text: 'Recognizing that knowing where you come from clarifies where you are going.',
-  },
+];
+
+export const COMMUNITY_BULLETS = [
+  'Diaspora seekers navigating multiple homes and borders',
+  'Keepers of oral memory, recipes, and heirlooms',
+  'Parents wanting to ground children in living lineage',
+  'Anyone holding questions their family never answered',
 ];
 
 export interface WebinarSpeaker {
@@ -187,6 +194,7 @@ export interface WebinarSpeaker {
   location?: string;
   focusArea: string;
   topics: string[];
+  takeaways: string[];
   shortBio: string;
   fullBio: string;
   quote?: string;
@@ -204,18 +212,22 @@ export const WEBINAR_SPEAKERS: WebinarSpeaker[] = [
     location: 'Kigali, Rwanda',
     focusArea: 'Inclusive Systems & Community Anchoring',
     topics: ['Inclusion & Safeguarding', 'Youth Leadership', 'Systems Change'],
+    takeaways: [
+      'Designing systems where underserved groups find genuine belonging',
+      'Refugee inclusion, youth mentorship, and dignified livelihoods',
+      'Bridging strategy, finance, and social impact across Africa & Canada',
+    ],
     shortBio:
-      'Head of Gender & Inclusion at Mastercard Foundation Rwanda Country Programs, championing refugee inclusion, youth mentorship, and dignified livelihoods across Africa and Canada.',
+      'Head of Gender & Inclusion at Mastercard Foundation Rwanda Country Programs, championing refugee inclusion, youth leadership, and dignified work.',
     fullBio:
-      "Steffi B. Nineza is the Head of Gender & Inclusion at the Mastercard Foundation Rwanda Country Programs, where she leads efforts to advance gender, disability, refugee inclusion, and safeguarding across the Foundation's investments and strategic initiatives. With experience spanning finance, strategy, operations, and social impact, she has held leadership roles at the Mastercard Foundation, Absa Group, Deloitte, and other organizations in Africa and Canada. Steffi is a passionate advocate for inclusive development and systems change, with a particular focus on expanding opportunities for young women and other underserved groups to access dignified and fulfilling work. She has designed and led initiatives supporting youth leadership, mentorship, and refugee inclusion, and has served as a trainer, mentor, speaker, and board member. Steffi holds an MBA from the University of Pretoria and is a Chartered Professional Accountant (CPA, CA).",
+      "Steffi B. Nineza leads gender, disability, refugee inclusion, and safeguarding across Mastercard Foundation's Rwanda investments. With background across finance, operations, and social impact at Absa Group and Deloitte, she champions systemic opportunities for young women and underserved groups. Steffi holds an MBA from the University of Pretoria and is a Chartered Professional Accountant (CPA, CA).",
     quote:
-      'Advancing systems where young people and underserved communities find deep dignity, belonging, and enduring opportunity.',
+      'Advancing spaces where young people and underserved communities find deep dignity, belonging, and enduring opportunity.',
     credentials: [
       'MBA, University of Pretoria',
       'Chartered Professional Accountant (CPA, CA)',
-      'Former Leadership at Deloitte & Absa Group',
+      'Leadership alumnus: Deloitte & Absa Group',
     ],
-    // Optimized with Cloudinary facial focus, auto compression & responsive dimensions
     imageUrl:
       'https://res.cloudinary.com/dbbw8jsjc/image/upload/c_fill,g_face,w_600,h_750,q_auto,f_auto/v1790776829/WhatsApp_Image_2026-09-30_at_12.35.35_PM_cxemas.jpg',
     rawImageUrl:
@@ -229,16 +241,21 @@ export const WEBINAR_SPEAKERS: WebinarSpeaker[] = [
     location: 'London · Zürich · Nigeria',
     focusArea: 'Diaspora Histories & Evolving Lineage',
     topics: ['Diaspora Identity', 'Igbo Heritage', 'European & African Memory'],
+    takeaways: [
+      'Navigating multi-rooted identity across 5 countries and languages',
+      'Reclaiming Igbo heritage against dominant cultural narratives',
+      'How historical memory and archival silences shape personal belonging',
+    ],
     shortBio:
-      'Zürich-based historian with German and Nigerian roots, born in London and lived across five countries. Utrecht University BA in History, researching how identity evolves across generational and geographic crossings.',
+      'Zürich-based historian with German and Nigerian roots. Born in London and lived across five countries, researching how identity evolves through diaspora and memory.',
     fullBio:
-      'Felix is a Zürich-based historian with German and Nigerian roots, born in London. Having lived in five countries, he has always seen identity as an evolving concept. Native in English and German, his Igbo identity is the one that has struggled to break through. He completed his International Baccalaureate at Schule Schloss Salem and holds a BA in History from Utrecht University, where his thesis examined how the Swiss press understood neutrality and national identity in 1940.',
+      'Felix is a Zürich-based historian with German and Nigerian roots, born in London. Having lived across five countries, he explores identity as an evolving continuum. Native in English and German, his Igbo identity is the one he intentionally reclaimed. He completed his IB at Schule Schloss Salem and holds a BA in History from Utrecht University.',
     quote:
       'Identity is an evolving concept—bridging what we carry natively with the ancestral lineage waiting to break through.',
     credentials: [
       'BA in History, Utrecht University',
       'Schule Schloss Salem International Baccalaureate',
-      'Trilingual in English, German & Igbo',
+      'Trilingual research across English, German & Igbo',
     ],
     imageUrl:
       'https://res.cloudinary.com/dbbw8jsjc/image/upload/c_fill,g_face,w_600,h_750,q_auto,f_auto/v1790776829/WhatsApp_Image_2026-09-30_at_12.38.33_PM_mhfj7g.jpg',
@@ -250,15 +267,20 @@ export const WEBINAR_SPEAKERS: WebinarSpeaker[] = [
     name: "A'Monica Hubbard",
     role: 'Entrepreneur & Founder',
     organization: 'Kugaruka Iwacu, Ltd',
-    location: 'Rwanda',
+    location: 'Kigali, Rwanda',
     focusArea: 'Homecoming, Belonging & Rwandan Hospitality',
     topics: ['Ancestral Return', 'Homecoming', 'Cultural Hospitality'],
+    takeaways: [
+      'The emotional realities of returning to ancestral African soil',
+      'Crafting spaces of sanctuary, craftsmanship, and peaceful living',
+      'Rwandan hospitality as a vessel for diaspora reconnection',
+    ],
     shortBio:
-      'Entrepreneur who embarked on an intentional return journey to ancestral soil, founding Kugaruka Iwacu to cultivate spaces of sanctuary, craftsmanship, and peace in Rwanda.',
+      'Entrepreneur on an intentional journey back to ancestral soil, founding Kugaruka Iwacu to offer every traveler a sanctuary of belonging and craftsmanship in Rwanda.',
     fullBio:
-      'Earlier this year, A’Monica began an intentional journey back to the continent—a return to her ancestral roots. Kugaruka Iwacu, Ltd reflects both her own homecoming and her hope that every guest feels a sense of belonging. We are committed to offering a seamless stay rooted in Rwandan hospitality, craftsmanship, and peaceful living.',
+      'Earlier this year, A’Monica began an intentional journey back to the continent—a return to ancestral roots. Kugaruka Iwacu reflects both her own homecoming and her mission that every guest feels deep belonging through Rwandan hospitality, local craftsmanship, and peaceful living.',
     quote:
-      'A return to ancestral roots—offering every traveler and seeker a true home rooted in hospitality and peaceful living.',
+      'A return to ancestral roots—offering every guest a sanctuary rooted in hospitality, craftsmanship, and peaceful living.',
     credentials: [
       'Founder, Kugaruka Iwacu, Ltd',
       'Curator of Rooted Hospitality & Craftsmanship',
